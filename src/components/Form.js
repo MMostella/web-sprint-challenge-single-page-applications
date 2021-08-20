@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
@@ -70,11 +71,9 @@ const StyledForm = styled.div `
     .toppings {
         display: flex;
         flex-wrap: wrap;
-        /* border: 1px solid red; */
     }
 
     .toppings label {
-        /* border: 1px solid blue; */
         width: 45%;
         margin: .5% 1% .5% 1.5%;
         font-size: 1.2em;
@@ -371,7 +370,7 @@ export default function Form(props) {
                         name='gluten'
                         value='gluten'
                         onChange={onChange}
-                        checked={values.gluten === 'gluten' ? true : false}
+                        checked={values.gluten === true ? true : false}
                     />Gluten Free Crust (+ $10)
                 </label>
                 <h3 className='specialh3'>Special Instructions</h3>
@@ -429,7 +428,7 @@ export default function Form(props) {
                             value={values.quantity}
                             onChange={onChange}
                         />
-                        <button id='order-button' disabled={disabled}>Add to Order</button>
+                        <Link to='/orderDetails'><button disabled={disabled}>Add</button></Link>
                     </label>
                 </div>
             </form>

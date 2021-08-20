@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 
 const StyledHome = styled.div `
@@ -103,20 +102,20 @@ const StyledHome = styled.div `
 
 export default function Home() {
     return (
-        <StyledHome>
-            <img className='homePic'/>
+        <StyledHome >
+            <img className='homePic' alt='homePic'/>
             <div className='homepage'>
                 <h2>The food you want... when you want it!</h2>
-                <Link to='/pizza'>
-                    <button id='order-pizza' className='pizzaButton'>Pizza Time?</button>
-                </Link>
+                <Link to='/pizza'><button id='order-pizza' className='pizzaButton'>Pizza Time?</button></Link>
+                    {/* <button id='order-pizza' className='pizzaButton'>Pizza Time?</button> */}
+                {/* </Link> */}
             </div>
             <div className='delivery'>
                 <h3>Food Delivery... the best thing since coding!</h3>
             </div>
             <div className='foodPlaces a'>
                 <div className='group-place'>
-                    <img className='mcdonalds' />
+                    <img className='mcdonalds' alt='burger'/>
                     <div className='place'>
                         <h4>McDonald's</h4>
                         <p>$ - American - Fast Food - Burgers</p>
@@ -125,7 +124,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className='group-place'>
-                    <img className='olive'/>
+                    <img className='olive' alt='italian'/>
                     <div className='place'>
                         <h4>Olive Garden</h4>
                         <p>$$$ - Italian - Vegetarian Friendly</p>
@@ -134,7 +133,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className='group-place'>
-                    <img className='mill'/>
+                    <img className='mill' alt='wrap'/>
                     <div className='place'>
                         <h4>Mill Street Deli</h4>
                         <p>$ - American - Soups</p>
@@ -143,7 +142,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className='group-place'>
-                    <img className='rosies' />
+                    <img className='rosies' alt='mexican'/>
                     <div className='place'>
                         <h4>Rosie's Mexican Cantina</h4>
                         <p>$$ - Mexican - Southwestern</p>
@@ -152,7 +151,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className='group-place'>
-                    <img className='blue'/>
+                    <img className='blue' alt='bbq'/>
                     <div className='place'>
                         <h4>Blue Plate Cafe</h4>
                         <p>$ - American - Cafe</p>
@@ -161,7 +160,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className='group-place'>
-                    <img className='viet' />
+                    <img className='viet' alt='asian'/>
                     <div className='place'>
                         <h4>Viet Cuisine</h4>
                         <p>$ - Asian - Vietnamese</p>

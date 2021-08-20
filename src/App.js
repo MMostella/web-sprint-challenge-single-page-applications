@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Route, Switch, Link } from 'react-router-dom';
-import Home from "./components/Home";
 import Form from "./components/Form";
+import Home from './components/Home';
+import Complete from "./components/Complete";
+
+import styled from 'styled-components';
+
+import { Route, Switch, Link } from 'react-router-dom';
 import axios from "./axios";
 import * as yup from 'yup';
 import schema from './validation/formSchema';
-
-import styled from 'styled-components';
 
 const StyledApp = styled.div `
   .headerMain {
@@ -55,6 +57,26 @@ const App = () => {
   const [formValues, setFormValues] = useState(initialOrderValues)
   const [formErrors, setFormErrors] = useState(initialOrderValues)
   const [disabled, setDisabled] = useState(initialDisabled)
+
+  // const order = {
+  //   name: formValues.name.trim(),
+  //   size: formValues.size,
+  //   pepperoni: formValues.pepperoni,
+  //   sausage: formValues.sausage,
+  //   canadianBacon: formValues.canadianBacon,
+  //   spicyItalianSausage: formValues.spicyItalianSausage,
+  //   grilledChicken: formValues.grilledChicken,
+  //   onions: formValues.onions,
+  //   greenPepper: formValues.greenPepper,
+  //   dicedTom: formValues.dicedTom,
+  //   blackOlives: formValues.blackOlives,
+  //   roastedGarlic: formValues.roastedGarlic,
+  //   artHearts: formValues.artHearts,
+  //   threeCheese: formValues.threeCheese,
+  //   pineapple: formValues.pineapple,
+  //   xtraCheese: formValues.xtraCheese,
+  //   special: formValues.special,
+  // }
 
   const getOrder = () => {
     axios.get('fakeapie.com')
@@ -121,16 +143,19 @@ const App = () => {
   }, [])
 
   useEffect(() => {
-      schema.isValid(formValues).then(valid => setDisabled(!valid))
-    }, [formValues])
+    schema.isValid(formValues).then(valid => setDisabled(!valid))
+  }, [formValues])
 
   return (
     <StyledApp>
-      <div>
+      <div className='headerMain'>
         <h1>Lambda Eats</h1>
         <Link to='/' className='homeLink'>Home</Link>
       </div>
       <Switch>
+        <Route exact path='/orderDetails'>
+          <Complete values={formValues} />
+        </Route>
         <Route exact path='/pizza'>
           <Form 
             values={formValues}
@@ -143,7 +168,7 @@ const App = () => {
         <Route exact path='/'>
           <Home />
         </Route>
-      </Switch>      
+      </Switch>
     </StyledApp>
   );
 };

@@ -60,7 +60,7 @@ Your finished project must include all of the following requirements:
 - [1] A dropdown for pizza size with an id of "size-dropdown"
 - [1] A checklist for toppings - at least 4 (hint: name each separately!)
 - [1] Text input for special instructions with an id of "special-text"
-- [-] An Add to Order button that has an id of "order-button" and that submits form and returns a database record of name, size, toppings and special instructions
+- [1] An Add to Order button that has an id of "order-button" and that submits form and returns a database record of name, size, toppings and special instructions
 
 Data should look something like
 ```
