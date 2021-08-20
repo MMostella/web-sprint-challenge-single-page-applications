@@ -34,15 +34,18 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
+The useRouteMatch hook is useful any time you are using a route just so you can get access to its match data.
 1. How would you explain form validation to someone who has never programmed before?
+Validation is validating that inputs and text fields are not only filled out. But also filled out properly.
 1. In 1-2 sentences, define end to end testing.
+End to end is testing every scenerio from the front to the end.
 
 ## Instructions
 
 ### Task 1: Project Set Up
 
 - [1] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
+- [1] Add your team lead as collaborator on Github
 - [1] Clone your OWN version of the repository (Not Lambda's by mistake!)
 - [1] Create a new branch: `git checkout -b <firstName-lastName>`
 - [1] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
@@ -81,9 +84,9 @@ there is a key for each of the toppings and they are booleans
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
-- [ ] test that you can select multiple toppings
-- [ ] test that you can submit the form
+- [1] test that you can add text to the box
+- [1] test that you can select multiple toppings
+- [1] test that you can submit the form
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
