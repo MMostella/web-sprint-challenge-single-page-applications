@@ -1,5 +1,7 @@
 import React from "react";
 import { Route, Switch, Link } from 'react-router-dom';
+import Home from "./components/Home";
+import Form from "./components/Form";
 
 
 const App = () => {
@@ -10,10 +12,10 @@ const App = () => {
       </div>
       <Switch>
         <Route exact path='/pizza'>
-          {/* <Form /> */}
+          <Form />
         </Route>
         <Route exact path='/'>
-          {/* <Home /> */}
+          <Home />
         </Route>
       </Switch>      
     </>

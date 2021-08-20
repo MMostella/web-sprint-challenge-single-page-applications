@@ -1,8 +1,172 @@
 import React from 'react';
 
+import styled from 'styled-components';
+
+const StyledForm = styled.div `
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 25%;
+    border: 2px solid black;
+
+    .title h3 {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    .formPic {
+        background: url('https://images.unsplash.com/photo-1618213837799-25d5552820d3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHBpenphfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 400px;
+        border: 2px solid black;
+    }
+
+    .titleCenter {
+        font-size: 1.5em;
+        margin-left: 3%;
+    }
+
+    .sizeh3 {
+        background-color: lightgray;
+        padding: 1% 0 1% 2%;
+    }
+
+    .pizzaSize {
+        margin-left: 3%;
+    }
+
+    .pizzaSize select {
+        width: 25%;
+    }
+
+    .sauceh3 {
+        background-color: lightgray;
+        padding: 1% 0 1% 2%;
+    }
+
+    .chooseSauce {
+        display: flex;
+        flex-direction: column;
+        margin: 2%;
+    }
+
+    .chooseSauce label {
+        margin: .5%;
+    }
+
+    .chooseSauce input {
+        margin-right: 1%;
+    }
+
+    .toppingh3 {
+        background-color: lightgray;
+        padding: 1% 0 1% 2%;
+    }
+
+    .toppings {
+        display: flex;
+        flex-wrap: wrap;
+        /* border: 1px solid red; */
+    }
+
+    .toppings label {
+        /* border: 1px solid blue; */
+        width: 45%;
+        margin: .5% 1% .5% 1.5%;
+        font-size: 1.2em;
+    }
+
+    .toppings label input {
+        margin-right: 3%;
+    }
+
+    .substituteh3 {
+        background-color: lightgray;
+        padding: 1% 0 1% 2%;
+    }
+
+    .gluten {
+        margin: 2%;
+    }
+
+    .gluten input {
+        margin-right: 1.5%;
+    }
+
+    .specialh3 {
+        background-color: lightgray;
+        padding: 1% 0 1% 2%;
+    }
+
+    .special {
+        display: flex;
+        justify-content: center;
+    }
+
+    .special input {
+        width: 90%;
+        height: 50px;
+        margin-bottom: 2%;
+        font-size: 1.2em;
+    }
+
+    .buyerInfo {
+        border-top: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buyerInfo h3 {
+        margin-left: 3%;
+    }
+
+    .buyerInfo label {
+        margin: 1%;
+        width: 80%;
+    }
+
+    .buyerInfo input {
+        margin-left: 1%;
+    }
+
+    .addOrder {
+        display: flex;
+        justify-content: center;
+        border-top: 2px solid black;
+        width: 91%;
+        margin: 0 4.5% 0 4.5%;
+        padding-top: 2%;
+    }
+
+    .addOrder label {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 3%;
+    }
+
+    .addOrder input {
+        width: 30%;
+    }
+
+    .addOrder button {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 65%;
+        font-size: 1.2em;
+    }
+`
+
 export default function Form(props) {
     return (
-        <>
+        <StyledForm>
             <form id='pizza-form'>
                     {/* onSubmit={onSubmit} */}
                 <div className='title'>
@@ -247,6 +411,6 @@ export default function Form(props) {
                     {/* <button >Add to Order</button> */}
                 </div>
             </form>
-        </>
+        </StyledForm>
     )
 }
