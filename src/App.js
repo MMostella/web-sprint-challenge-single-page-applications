@@ -132,7 +132,13 @@ const App = () => {
       </div>
       <Switch>
         <Route exact path='/pizza'>
-          <Form />
+          <Form 
+            values={formValues}
+            change={inputChange}
+            submit={formSubmit}
+            errors={formErrors}
+            disabled={disabled}
+          />
         </Route>
         <Route exact path='/'>
           <Home />
