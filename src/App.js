@@ -79,7 +79,7 @@ const App = () => {
   // }
 
   const getOrder = () => {
-    axios.get('fakeapie.com')
+    axios.get(`https://reqres.in/api/orders`)
       .then(res => {
         console.log(res.data);
         setNewOrder(res.data)
@@ -88,7 +88,7 @@ const App = () => {
   }
 
   const postNewOrder = pizzaOrder => {
-    axios.post('fakeapi.com', pizzaOrder)
+    axios.post(`https://reqres.in/api/orders`, pizzaOrder)
       .then(res => {
         setNewOrder([res.data, ...newOrder])
       })
